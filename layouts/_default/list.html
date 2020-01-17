@@ -2,14 +2,14 @@
 
 <div class="site-meta">
 
-{{ if not .IsHome }}
-<h1>{{ .Title | markdownify }}</h1>
-{{ else}}
 <div class="page-meta">
+{{ if not .IsHome }}
+<h1 id="post-title">{{ .Title | markdownify }}</h1>
+{{ else}}
 <h1 id="post-title"><span class="title">{{ .Site.Title }}</span></h1>
 {{ with .Site.Params.subtitle }}<h2 class="subtitle">{{ . }}</h2>{{ end }}
-</div>
 {{ end }}
+</div>
 
 </div>
 

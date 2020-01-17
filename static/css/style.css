@@ -1,4 +1,10 @@
 body {
+}
+code {
+}
+
+body {
+  font-family: serif;
   max-width: 800px;
   margin: auto;
   padding: 1em;
@@ -56,7 +62,11 @@ pre {
   padding: 1em;
   overflow-x: auto;
 }
-code { background: #f9f9f9; }
+code {
+  background: #f9f9f9;
+  font-family: monospace;
+  font-size: 85%;
+}
 pre code { background: none; }
 
 /* misc elements */
