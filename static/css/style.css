@@ -1,13 +1,11 @@
 body {
-}
-code {
-}
-
-body {
   font-family: serif;
   max-width: 800px;
   margin: auto;
   padding: 1em;
+}
+
+p {
   line-height: 1.5em;
 }
 
