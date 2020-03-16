@@ -7,6 +7,7 @@ body {
 
 p {
   line-height: 1.5em;
+  hyphens: none;
 }
 
 /* header and footer areas */
@@ -14,7 +15,10 @@ p {
   padding: 0;
   margin-top: 0;
 }
-.menu li { display: inline-block; }
+.menu li {
+  display: inline-block;
+  margin-bottom: 0;
+}
 .page-meta, .article-meta, .menu a {
   padding: 5px;
 }
@@ -40,6 +44,7 @@ hr {
 .home-index li {
   font-size: 1.2em;
   padding: 0.2em;
+  margin-bottom: 0;
 }
 .home-index li a {
   text-decoration: none;
@@ -59,11 +64,14 @@ pre {
   box-shadow: 5px 5px 5px #eee;
   padding: 1em;
   overflow-x: auto;
+  border-radius: 4px;
 }
 code {
+  border-radius: 4px;
   background: #f9f9f9;
   font-family: monospace;
   font-size: 85%;
+  padding: 0 0.4em;
 }
 pre code { background: none; }
 
@@ -76,6 +84,10 @@ blockquote {
   padding: 3px 1em 3px;
 }
 
+li {
+  margin-bottom: 0.2em;
+}
+
 table {
   margin: auto;
   border-top: 1px solid #666;
@@ -83,4 +95,19 @@ table {
 }
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
-thead, tfoot, tr:nth-child(even) { background: #eee; }
+thead, tfoot, tr:nth-child(even) { background: #ebdbb2; }
+
+/* fix super/subscript changing line height */
+sub {
+  font-size: 0.675em;
+  line-height: 1.2;
+  vertical-align: sub;
+  vertical-align: -20%;
+}
+
+sup {
+  font-size: 0.675em;
+  line-height: 1.2;
+  vertical-align: super;
+  vertical-align: 35%;
+}
