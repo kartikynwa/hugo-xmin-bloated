@@ -41,8 +41,8 @@ hr {
 
 /* format homepage list of pages */
 .home-index {
-  list-style-type: none;
   padding-left: 5px;
+  list-style-type: none;
 }
 .home-index li {
   font-size: 1.2em;
@@ -92,7 +92,8 @@ blockquote {
 }
 
 ol, ul {
-  padding-left: 1.5em;
+  padding-left: 0.5em;
+  list-style-position: inside;
 }
 
 li {
