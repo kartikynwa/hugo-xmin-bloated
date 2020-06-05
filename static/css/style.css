@@ -29,9 +29,6 @@ p {
   line-height: 1em;
 }
 
-a {
-  color: inherit;
-}
 .article-meta, footer { text-align: center; }
 footer a { text-decoration: none; }
 hr {
@@ -49,10 +46,16 @@ hr {
   padding: 0.2em;
   margin-bottom: 0;
 }
-.menu li a, .home-index li a {
+a, .home-index li a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+}
+.menu li a {
+  color: inherit;
   text-decoration: none;
 }
-.menu li a:hover, .home-index li a:hover {
+a:hover, .menu li a:hover, .home-index li a:hover {
   text-decoration: underline;
 }
 .post-date {
