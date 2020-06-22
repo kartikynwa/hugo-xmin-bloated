@@ -1,8 +1,12 @@
 {{ partial "header.html" . }}
 <div class="article-meta">
 <h1 id="post-title"><span class="title">{{ .Title | markdownify }}</span></h1>
-{{ with .Params.author }}<p class="author">by <b>{{ . }}</b></p>{{ end }}
-{{ if (gt .Params.date 0) }}<p class="date">posted on <b>{{ .Date.Format "2006-01-02" }}</b></p>{{ end }}
+{{ if isset .Params "author" }}
+  <p class="author">authored by <b>{{ .Params.author }}</b>{{ if isset .Params "publishdate" }}
+    on <b>{{ .PublishDate.Format "2006-01-02"}}</b>
+  {{end}}</p>
+{{ end }}
+{{ with .Date }}<p class="date">posted on <b>{{ .Format "2006-01-02" }}</b></p>{{ end }}
 </div>
 
 <main>
