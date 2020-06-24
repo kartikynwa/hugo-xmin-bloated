@@ -2,11 +2,10 @@
 <div class="article-meta">
 <h1 id="post-title"><span class="title">{{ .Title | markdownify }}</span></h1>
 {{ if isset .Params "author" }}
-  <p class="author">authored by <b>{{ .Params.author }}</b>{{ if isset .Params "publishdate" }}
-    on <b>{{ .PublishDate.Format "2006-01-02"}}</b>
-  {{end}}</p>
+  <p class="author">authored by <b>{{ .Params.author }}</b>{{ if isset .Params "originaldate" }}
+    on <b>{{ dateFormat "2006-01-02" .Params.originaldate }}</b>{{end}}</p>
 {{ end }}
-{{ with .Date }}<p class="date">posted on <b>{{ .Format "2006-01-02" }}</b></p>{{ end }}
+{{ with .PublishDate }}<p class="date">posted on <b>{{ .Format "2006-01-02" }}</b></p>{{ end }}
 </div>
 
 <main>
