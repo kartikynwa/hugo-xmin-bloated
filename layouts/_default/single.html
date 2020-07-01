@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 <div class="article-meta">
-<h1 id="post-title"><span class="title">{{ .Title | markdownify }}</span></h1>
+<h1 id="post-title">{{ .Title | markdownify }}</h1>
 {{ if isset .Params "author" }}
   <p class="author">authored by <b>{{ .Params.author }}</b>{{ if isset .Params "originaldate" }}
     on <b>{{ dateFormat "2006-01-02" .Params.originaldate }}</b>{{end}}</p>

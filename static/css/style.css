@@ -1,9 +1,12 @@
+html { font-size: 2.4vw; }
+@media all and (min-width:1000px) { html { font-size: 24px; } }
+@media all and (max-width:520px) { html{ font-size: 18px; } }
+
 body {
-  font-family: serif;
   max-width: 800px;
   margin: auto;
   padding: 1em;
-  background-color: #fafafa;
+  background-color: #eee;
 }
 
 p {
@@ -31,6 +34,7 @@ p {
 
 .article-meta, footer { text-align: center; }
 footer a { text-decoration: none; }
+
 hr {
   border-style: dashed;
   color: #ddd;
@@ -63,7 +67,7 @@ a:hover, .menu li a:hover, .home-index li a:hover {
   color: #888;
 }
 
-/* h1: gimme some space */
+/* gimme some space */
 #post-title { margin-top: 0.5em; }
 h2 { margin-top: 1.5em; }
 
